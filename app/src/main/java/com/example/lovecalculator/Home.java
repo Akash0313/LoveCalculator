@@ -49,7 +49,16 @@ ch=false;
                 resulttxt.setText(resultt.toString()+"%");
             }
         });
-        
+
+        calculateagain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rl.setVisibility(View.VISIBLE);
+                result.setVisibility(View.GONE);
+                boy.setText("");
+                girl.setText("");
+            }
+        });
     }
 
     @Override
