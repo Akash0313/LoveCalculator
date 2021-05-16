@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:id="@+id/mainlayout"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -24,7 +24,6 @@
         android:fontFamily="serif-monospace"
         android:layout_gravity="center"
         android:hint="CALCULATE YOUR LOVE"
-        android:textColor="#670D0D"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
 
@@ -95,12 +94,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/secondlayout"
-        android:visibility="gone">
+        android:foregroundGravity="center"
+        android:visibility="visible">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/heart3"/>
+            android:id="@+id/imageView2"
+            android:layout_width="289dp"
+            android:layout_height="321dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.265"
+            app:srcCompat="@drawable/heart3" />
 
         <TextView
             android:id="@+id/result"
@@ -111,9 +118,29 @@
             android:textSize="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.454" />
+            app:layout_constraintVertical_bias="0.328" />
+
+        <Button
+            android:id="@+id/calculateagain"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="#D8AC8484"
+            android:gravity="center_horizontal"
+            android:text="CALCULATE AGAIN"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.738" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

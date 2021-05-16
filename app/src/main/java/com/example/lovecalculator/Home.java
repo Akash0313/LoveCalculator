@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class Home extends AppCompatActivity {
     TextView boy,girl,resulttxt;
-    Button calculate;
+    Button calculate,calculateagain;
     LinearLayout rl;
     Boolean ch=true;
     ConstraintLayout result;
@@ -30,6 +30,7 @@ public class Home extends AppCompatActivity {
         boy=findViewById(R.id.boy);
         girl=findViewById(R.id.girl);
         calculate=findViewById(R.id.calculate);
+        calculateagain=findViewById(R.id.calculateagain);
         result=findViewById(R.id.secondlayout);
         rl=findViewById(R.id.mainlayout);
         resulttxt=findViewById(R.id.result);
@@ -48,6 +49,7 @@ ch=false;
                 resulttxt.setText(resultt.toString()+"%");
             }
         });
+        
     }
 
     @Override
