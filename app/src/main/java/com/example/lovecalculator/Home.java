@@ -15,10 +15,11 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class Home extends AppCompatActivity {
-    TextView boy,girl,result;
+    TextView boy,girl,resulttxt;
     Button calculate;
     LinearLayout rl;
     Boolean ch=true;
+    ConstraintLayout result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +30,9 @@ public class Home extends AppCompatActivity {
         boy=findViewById(R.id.boy);
         girl=findViewById(R.id.girl);
         calculate=findViewById(R.id.calculate);
-        result=findViewById(R.id.result);
+        result=findViewById(R.id.secondlayout);
         rl=findViewById(R.id.mainlayout);
+        resulttxt=findViewById(R.id.result);
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +45,7 @@ ch=false;
                 Integer resultt=random.nextInt(99);
                 rl.setVisibility(View.GONE);
                 result.setVisibility(View.VISIBLE);
-                result.setText(resultt.toString()+"%");
+                resulttxt.setText(resultt.toString()+"%");
             }
         });
     }
@@ -56,6 +58,9 @@ ch=false;
     }else{
         rl.setVisibility(View.VISIBLE);
         result.setVisibility(View.GONE);
+        boy.setText("");
+        girl.setText("");
+        //commit then vcs  git then push for more update
 
     }
     }
